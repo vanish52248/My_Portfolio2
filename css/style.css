@@ -777,7 +777,7 @@ body main .main__inner .skill-container .skill-box li + li {
   }
   body main .main__inner .main-container .profile-container .profile-item {
     margin: 0 auto;
-    max-width: 420px;
+    max-width: 375px;
     padding: 30px 25px;
   }
   body main .main__inner .main-container .profile-container .profile-item ul {
