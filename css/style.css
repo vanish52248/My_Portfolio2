@@ -792,7 +792,8 @@ body main .main__inner .skill-container .skill-box li + li {
     margin: 0 auto;
   }
   body main .main__inner .main-container .licence-container img {
-    width: 47%;
+    max-width: 47%;
+    width: 100%;
   }
   body main .main__inner .main-container .licence-container img:nth-of-type(n + 3) {
     margin-top: 12px;
