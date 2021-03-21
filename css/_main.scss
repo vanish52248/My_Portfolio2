@@ -12,11 +12,6 @@ body {
 	font: 300 14px / 1.9 "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic,
 		"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo,
 		sans-serif;
-	.far,
-	.fas {
-		@include fontsize(30);
-		transform: translateX(5px);
-	}
 	main {
 		.main__inner {
 			color: #fff;
@@ -40,7 +35,8 @@ body {
 				}
 			}
 			.main-container {
-				width: 70%;
+				width: 100%;
+				max-width: 1080px;
 				margin: 0 auto;
 				text-align: center;
 				&:not(:nth-of-type(5)) {
@@ -63,7 +59,7 @@ body {
 					font-family: "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic,
 						"ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ,
 						Meiryo, sans-seri;
-					padding-bottom: 100px;
+					padding: 0 30px 100px;
 					text-align: left;
 				}
 				.profile-container {
@@ -91,11 +87,13 @@ body {
 					width: 100%;
 					display: flex;
 					justify-content: space-around;
-					padding-top: 80px;
+					padding-top: 60px;
+					max-width: 900px;
+					margin: 0 auto;
 					img {
 						border-radius: 50%;
-						width: 150px;
-						height: 150px;
+						width: 24%;
+						max-width: 150px;
 					}
 				}
 				.create-container {
@@ -158,7 +156,24 @@ body {
 		}
 	}
 }
-
+@media screen and (min-width: 769px) {
+	.fadeD {
+		// 上から下にアニメーション
+		opacity: 0;
+		transform: translate(0, 50%);
+		transition: 1s;
+	}
+	.fadeU {
+		// 下から上にアニメーション
+		opacity: 0;
+		transform: translate(0, -50%);
+		transition: 1s;
+	}
+	.active {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
 // SmartPhone Width
 //--------------------------------------------------
 @media #{$smartPhone} {
@@ -180,7 +195,7 @@ body {
 						}
 					}
 					p {
-						padding: 0 70px 100px;
+						padding: 0 30px 100px;
 					}
 					.profile-container {
 						display: block;
@@ -189,17 +204,23 @@ body {
 						}
 						.profile-item {
 							margin: 0 auto;
-							max-width: 260px;
-							padding-top: 30px;
+							max-width: 420px;
+							padding: 30px 25px;
+							ul {
+								@include fontsize(14);
+							}
 						}
 					}
 					.licence-container {
 						max-width: 400px;
-						padding-top: 40px;
+						padding: 20px 25px;
 						flex-wrap: wrap;
 						margin: 0 auto;
 						img {
-							margin: 20px 0 0 20px;
+							width: 47%;
+							&:nth-of-type(n + 3) {
+								margin-top: 12px;
+							}
 						}
 					}
 					.create-container {
@@ -208,7 +229,10 @@ body {
 						padding-left: none;
 						margin: auto;
 						.create-box {
-							transform: translateY(-25px);
+							&:nth-of-type(1) {
+								margin-top: -25px;
+							}
+							//ネガティブマージン
 							& > div {
 								margin-top: 30px;
 							}
@@ -273,6 +297,7 @@ body {
 						flex-wrap: wrap;
 						.skill-box {
 							max-width: 50%;
+							width: 48%;
 							&:nth-of-type(3) {
 								margin-top: 50px;
 							}

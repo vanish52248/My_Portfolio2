@@ -465,13 +465,20 @@ header .header__inner .header-logo {
   }
 }
 
+.far,
+.fas {
+  font-size: 30px;
+  font-size: 1.875rem;
+  margin-left: 5px;
+}
+
 footer .footer__inner {
   width: 100%;
+  color: #fff;
 }
 
 footer .footer__inner .footer-container {
   width: 80%;
-  margin: 0 auto;
   text-align: center;
   background-color: #151515;
 }
@@ -482,12 +489,16 @@ footer .footer__inner .footer-container h2 {
   font-size: 1.5625rem;
   font-family: "Modern Antiqua", "Noto Sans JP", serif;
   padding: 30px 0;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   border-bottom: 3px solid #fff;
 }
 
 footer .footer__inner .footer-container p {
   padding: 30px 0;
+}
+
+footer .footer__inner .footer-container p:nth-of-type(1) {
+  padding: 0 30px 30px 30px;
 }
 
 footer .footer__inner .footer-container .footer-icon {
@@ -522,14 +533,6 @@ body {
   font: 300 14px / 1.9 "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
 }
 
-body .far,
-body .fas {
-  font-size: 30px;
-  font-size: 1.875rem;
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
-}
-
 body main .main__inner {
   color: #fff;
   width: 80%;
@@ -557,7 +560,8 @@ body main .main__inner .mainbg h1 {
 }
 
 body main .main__inner .main-container {
-  width: 70%;
+  width: 100%;
+  max-width: 1080px;
   margin: 0 auto;
   text-align: center;
 }
@@ -582,7 +586,7 @@ body main .main__inner .main-container p {
   font-size: 0.875rem;
   line-height: 27px;
   font-family: "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-seri;
-  padding-bottom: 100px;
+  padding: 0 30px 100px;
   text-align: left;
 }
 
@@ -642,13 +646,15 @@ body main .main__inner .main-container .licence-container {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding-top: 80px;
+  padding-top: 60px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 body main .main__inner .main-container .licence-container img {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 24%;
+  max-width: 150px;
 }
 
 body main .main__inner .main-container .create-container {
@@ -725,6 +731,28 @@ body main .main__inner .skill-container .skill-box li + li {
   padding-top: 25px;
 }
 
+@media screen and (min-width: 769px) {
+  .fadeD {
+    opacity: 0;
+    -webkit-transform: translate(0, 50%);
+            transform: translate(0, 50%);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .fadeU {
+    opacity: 0;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .active {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
 @media screen and (max-width: 768px) {
   body main .main__inner {
     width: 100%;
@@ -740,7 +768,7 @@ body main .main__inner .skill-container .skill-box li + li {
     margin-bottom: 50px;
   }
   body main .main__inner .main-container p {
-    padding: 0 70px 100px;
+    padding: 0 30px 100px;
   }
   body main .main__inner .main-container .profile-container {
     display: block;
@@ -750,18 +778,25 @@ body main .main__inner .skill-container .skill-box li + li {
   }
   body main .main__inner .main-container .profile-container .profile-item {
     margin: 0 auto;
-    max-width: 260px;
-    padding-top: 30px;
+    max-width: 420px;
+    padding: 30px 25px;
+  }
+  body main .main__inner .main-container .profile-container .profile-item ul {
+    font-size: 14px;
+    font-size: 0.875rem;
   }
   body main .main__inner .main-container .licence-container {
     max-width: 400px;
-    padding-top: 40px;
+    padding: 20px 25px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin: 0 auto;
   }
   body main .main__inner .main-container .licence-container img {
-    margin: 20px 0 0 20px;
+    width: 47%;
+  }
+  body main .main__inner .main-container .licence-container img:nth-of-type(n + 3) {
+    margin-top: 12px;
   }
   body main .main__inner .main-container .create-container {
     -webkit-box-orient: vertical;
@@ -774,9 +809,8 @@ body main .main__inner .skill-container .skill-box li + li {
     padding-left: none;
     margin: auto;
   }
-  body main .main__inner .main-container .create-container .create-box {
-    -webkit-transform: translateY(-25px);
-            transform: translateY(-25px);
+  body main .main__inner .main-container .create-container .create-box:nth-of-type(1) {
+    margin-top: -25px;
   }
   body main .main__inner .main-container .create-container .create-box > div {
     margin-top: 30px;
@@ -834,6 +868,7 @@ body main .main__inner .skill-container .skill-box li + li {
   }
   body main .main__inner .main-container .skill-container .skill-box {
     max-width: 50%;
+    width: 48%;
   }
   body main .main__inner .main-container .skill-container .skill-box:nth-of-type(3) {
     margin-top: 50px;

@@ -39,7 +39,7 @@ $(function () {
 $(function () {
 	$(window).on("load scroll resize", function () {
 		$(".fadeIn").each(function () {
-			// HTMLのfadeInさせたいクラスにfadeIn fadeDなどクラス名つける
+			// HTMLのfadeInさせたいクラスに[fadeIn fadeD]など2つクラス名つける
 			var imgPosition = $(this).offset().top;
 			var scroll = $(window).scrollTop();
 			var windowHeight = $(window).height();
@@ -86,7 +86,7 @@ $(function () {
 			//btn__active持ってたら
 			$("nav").css({
 				visibility: "visible",
-				opacity: 0.6,
+				opacity: 1,
 				//navに追加する
 			});
 		} else {
