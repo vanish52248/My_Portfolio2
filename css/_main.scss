@@ -106,6 +106,7 @@ body {
 							display: flex;
 							img {
 								max-width: 240px;
+								max-height: 110px;
 								width: 100%;
 							}
 							.create-text {
@@ -218,7 +219,7 @@ body {
 						margin: 0 auto;
 						img {
 							max-width: 47%;
-							width: 100%;
+							width: 47%;
 							&:nth-of-type(n + 3) {
 								margin-top: 12px;
 							}

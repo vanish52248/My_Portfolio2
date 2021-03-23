@@ -676,6 +676,7 @@ body main .main__inner .main-container .create-container .create-box .create-ite
 
 body main .main__inner .main-container .create-container .create-box .create-item img {
   max-width: 240px;
+  max-height: 110px;
   width: 100%;
 }
 
@@ -793,7 +794,7 @@ body main .main__inner .skill-container .skill-box li + li {
   }
   body main .main__inner .main-container .licence-container img {
     max-width: 47%;
-    width: 100%;
+    width: 47%;
   }
   body main .main__inner .main-container .licence-container img:nth-of-type(n + 3) {
     margin-top: 12px;
