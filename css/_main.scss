@@ -83,16 +83,22 @@ body {
 					}
 				}
 				.licence-container {
-					width: 100%;
+					width: 80%;
 					display: flex;
 					justify-content: space-around;
 					padding-top: 60px;
 					max-width: 900px;
 					margin: 0 auto;
-					img {
-						border-radius: 50%;
-						width: 24%;
-						max-width: 150px;
+					text-align: left;
+					ul, ol {
+						width: 100%;
+						padding: 0.5em 0.5em 0.5em 2em;/*ボックス内の余白*/
+						border: solid 3px gray;/*線の種類 太さ 色*/
+					}
+					ul li, ol li {
+						line-height: 1.5; /*文の行高*/
+						padding: 0.5em 0; /*前後の文との余白*/
+						@include fontsize(18);
 					}
 				}
 				.create-container {
@@ -107,7 +113,7 @@ body {
 							img {
 								max-width: 240px;
 								max-height: 110px;
-								width: 100%;
+								width: 240px;
 							}
 							.create-text {
 								h3 {
